@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-blue);
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+}
+
+.advice-card {
+  padding: 3rem 3rem 4rem;
+  text-align: center;
+  background-color: var(--dark-grayish-blue);
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.163);
+  width: 40rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.advice-card h5 {
+  color: var(--neon-green);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.advice-card p {
+  font-size: 28px;
+  color: var(--light-cyan);
+}
+
+.advice-card button {
+  text-align: center;
+  width: max-content;
+  margin: 0 auto;
+  border: none;
+  /* border-radius: 50%; */
+  background-color: var(--neon-green);
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: -25px;
+  padding-top: 5px;
+  border-radius: 25px;
+  left: calc(50% - 25px);
+}
+
+
+.mobile-divider{
+  display: none;
+}
+
+.advice-card button:hover {
+  box-shadow: 0px 0px 30px 1px var(--neon-green);
+}
+
+@media screen and (max-width: 600px) {
+
+  .advice-card{
+    width: 85%;
+    margin: 0 auto;
+    padding: 3rem 0.5rem 4rem;
+  }
+  .mobile-divider{
+    display: inline;
+  }
+  .desktop-divider{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 300px) {
+
+  .advice-card{
+    width: 85%;
+    margin: 0 auto;
+    padding: 2rem 0.5rem 2rem;
+  }
+  .advice-card p {
+    font-size: 22px;
+  }
+  .mobile-divider {
+    width: 100%;
+  }
+  .mobile-divider{
+    display: inline;
+  }
+  .desktop-divider{
+    display: none;
+  }
+}
